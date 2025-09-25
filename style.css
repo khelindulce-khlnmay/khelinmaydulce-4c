@@ -1,0 +1,74 @@
+:root {
+  --accent: #d9b3ff; 
+  --bg: #ffffff;
+  --card: #d8b4fe; 
+  --muted: #4b0082; 
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin: 0;
+  background: var(--bg);
+  color: #000;
+}
+
+.container { max-width: 980px; margin: 36px auto; padding: 24px; }
+
+header { display: flex; gap: 18px; align-items: center; }
+
+/* Avatar with image */
+.avatar {
+  width: 110px; 
+  height: 110px; 
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 { margin: 0; font-size: 26px; }
+
+p.lead { margin: 6px 0; color: var(--muted); }
+
+.grid { display: grid; grid-template-columns: 1fr 320px; gap: 20px; margin-top: 22px; }
+
+.card {
+  background: var(--card); border-radius: 14px; padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  color: #000;
+}
+
+.section-title { font-weight: 700; color: #4b0082; margin-bottom: 8px; }
+
+ul.meta { list-style: none; padding: 0; margin: 8px 0 0; }
+ul.meta li { margin: 6px 0; color: #000; }
+
+.skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+
+.skill {
+  background: #f3e8ff; color: #4b0082;
+  padding: 6px 10px; border-radius: 999px; font-size: 13px;
+}
+
+.education-item { margin-bottom: 12px; }
+.edu-year { font-size: 13px; color: #000; }
+
+.achievements li { margin: 6px 0; }
+
+footer { margin-top: 20px; text-align: center; color: #000; font-size: 13px; }
+
+.divider {
+  margin: 16px 0;
+  border: none;
+  border-top: 1px solid #c084fc;
+}
+
+@media (max-width: 860px) { 
+  .grid { grid-template-columns: 1fr; } 
+}
